@@ -1,0 +1,126 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  background: #ffffff;
+  padding: 2.2rem 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  animation: slideUp 0.35s ease;
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+  color: #2d6cdf;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.modal input {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 0.6rem;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.modal input:focus {
+  border-color: #2d6cdf;
+  box-shadow: 0 0 4px rgba(45,108,223,0.3);
+}
+
+.modal button {
+  margin-top: 0.5rem;
+  padding: 0.9rem;
+  background: #2d6cdf;
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.modal button:hover {
+  background: #1f4fa3;
+}
+
+.modal p {
+  margin-top: 1rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #2d6cdf;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  transition: transform 0.2s ease;
+}
+
+.close-modal:hover {
+  transform: scale(1.1);
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    width: 92%;
+    padding: 1.6rem;
+  }
+
+  .modal h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal input, .modal button {
+    font-size: 0.9rem;
+  }
+}

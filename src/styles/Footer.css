@@ -1,0 +1,210 @@
+/* ========== Footer Base Styles ========== */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* ========== Columns ========== */
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ffd700;
+  position: relative;
+}
+
+.footer-col h4::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #ffd700;
+  margin-top: 6px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li button {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li button:hover {
+  color: #fff;
+}
+
+/* ========== Logo & Address ========== */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-logo h3 {
+  font-size: 1.4rem;
+  color: #ffd700;
+  letter-spacing: 1px;
+}
+
+.footer-address {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-title {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.mt-4 {
+  margin-top: 20px;
+}
+
+/* ========== App Buttons ========== */
+.footer-apps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.app-btn {
+  background-color: #222;
+  border: 1px solid #333;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.app-btn:hover {
+  background-color: #333;
+}
+
+.small-text {
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+.bold-text {
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ========== Socials ========== */
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin: 10px 0 20px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: #ffd700;
+  color: #000;
+}
+
+/* ========== Contact Info ========== */
+.footer-contact p {
+  color: #ccc;
+  margin: 3px 0;
+}
+
+/* ========== Footer Bottom ========== */
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* ========== Responsive Design ========== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer-col {
+    text-align: left;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-col {
+    text-align: left;
+  }
+
+  .footer-socials {
+    justify-content: flex-start;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+.footer-owner {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footer-owner strong {
+  color: #ffd700;
+}
