@@ -12,15 +12,17 @@ const ProductCard = ({ icon, title, description }) => {
   );
 };
 
-export default function App() {
+export default function PremiumProducts() {
   const products = [
     { id: 1, icon: '🐄', title: 'Cow Milk', description: 'Fresh, pure cow milk delivered daily.' },
     { id: 2, icon: '🐃', title: 'Buffalo Milk', description: 'Creamy buffalo milk with higher fat content.' },
+    { id: 3, icon: '🥛', title: 'Toned Milk', description: 'Perfect balance of taste and health benefits.' },
+    { id: 4, icon: '🧈', title: 'Ghee', description: 'Pure desi ghee made from traditional methods.' },
   ];
 
   return (
     <div className="app-container1">
-      <h1>Our Premium Products</h1>
+      <h1 className="page-title1">Our Premium Products</h1>
       <div className="products-grid1">
         {products.map(product => (
           <ProductCard
