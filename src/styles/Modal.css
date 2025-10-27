@@ -124,3 +124,172 @@
     font-size: 0.9rem;
   }
 }
+
+
+/* my new css code  */
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Wrapper (Split layout) */
+.signup-wrapper {
+  display: flex;
+  flex-direction: row;
+  background: #2b6ef2;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Close button */
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Left white card */
+.signup-card {
+  background: white;
+  padding: 40px 35px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.signup-card h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.signup-card input[type="text"],
+.signup-card input[type="email"],
+.signup-card input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.signup-card input:focus {
+  border-color: #2b6ef2;
+  box-shadow: 0 0 4px rgba(43, 110, 242, 0.3);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 10px;
+  color: #555;
+}
+.checkbox input {
+  margin-right: 8px;
+}
+
+.signup-card button[type="submit"] {
+  width: 100%;
+  background: #2b6ef2;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.signup-card button[type="submit"]:hover {
+  background: #1f56c2;
+}
+
+.login-text {
+  font-size: 13px;
+  color: #555;
+  margin-top: 15px;
+}
+.link-btn {
+  background: none;
+  border: none;
+  color: #2b6ef2;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Right blue side */
+.signup-side {
+  width: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
+}
+.signup-side h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-wrapper {
+    flex-direction: column;
+  }
+
+  .signup-card, .signup-side {
+    width: 100%;
+  }
+
+  .signup-side {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .signup-side h1 {
+    font-size: 32px;
+  }
+
+  .signup-card {
+    padding: 30px 25px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
